@@ -17,3 +17,25 @@ repository.
 Note that CTA is not responsible for identifying any patents for which a license may be required by a CTA document, nor for conducting inquiries into the legal validity 
 or scope of those patents that are brought to its attention. For further IPR information, see Section 15 of EP-23: 
 https://standards.cta.tech/kwspub/rules/CTA-EP-23-T.pdf.
+
+
+### Run subsetting script
+Requirement: Python version must be 3.6 or greater
+
+To get creation date for all tests:
+
+```shell
+python get_test_creation_date.py
+```
+
+This script will clone wpt github repositry and checkout sepecific snapsot of WPT test directories for each testing group. Then reads the creation date of test files.
+At the end of script it outputs a json file which contains creation date for all the tests.
+
+To get subset of tests:
+
+```shell
+python subsetting_wpt.py
+```
+
+This script takes input parameters which defined in 'WMAS2019_input.json' and result from 'get_test_creation_date.py' and generates test subsets and
+outputs a list of test subset in a json file.
