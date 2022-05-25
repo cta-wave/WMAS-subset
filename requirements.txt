@@ -1,0 +1,3 @@
+python-git
+requests
+isodate
