@@ -18,9 +18,17 @@ Note that CTA is not responsible for identifying any patents for which a license
 or scope of those patents that are brought to its attention. For further IPR information, see Section 15 of EP-23: 
 https://standards.cta.tech/kwspub/rules/CTA-EP-23-T.pdf.
 
+### Requirement
+
+Python 3.6 or greater must be installed.
+Install required packages:
+
+```shell
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
 ### Run subsetting script
-Requirement: Python version must be 3.6 or greater
 
 To get creation date for all tests:
 
