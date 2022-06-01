@@ -8,11 +8,11 @@ import json
 import git
 
 OUTPUT_JSON = 'test_creation_date.json'
-WPT_LOCAL_CHECKOUT_PATH = 'wpt'
 
 # -------------------Manaul input parameters----------------------------
 WMAS2019_SERVER_URL = 'https://webapitests2019.ctawave.org/wave/'
 
+WPT_LOCAL_CHECKOUT_PATH = 'wpt'
 WPT_GIT = 'https://github.com/web-platform-tests/wpt.git'
 WPT_COMMITS = {
     'dom': 'cffa949fc9e0fcda9039f3275470ef7a663a7d6c',
@@ -65,6 +65,14 @@ WPT_COMMITS = {
     'html/canvas/element': '178b6bcde9cbb1d8e04076fe59c86ea94f122964',
 }
 
+ECMA_LOCAL_CHECKOUT_PATH = 'es6-tests'
+ECMA_GIT = 'https://github.com/tc39/test262.git'
+ECMA_COMMIT = '163fae3e68998c1a69e1e6825bf34e89b76cff58'
+
+WEBGL_LOCAL_CHECKOUT_PATH = 'webgl'
+WEBGL_GIT = 'https://github.com/KhronosGroup/WebGL'
+WEBGL_COMMIT = '495b85b3505837566e724e9f595354149af547f9'
+
 # -------------------End of manaul input parameters---------------------
 def send_request(request_api):
     '''Send api request and return json report'''
@@ -104,6 +112,16 @@ def main():
     print('Clone wpt git repositry:', WPT_GIT, 'to', WPT_LOCAL_CHECKOUT_PATH)
     wpt_repo = git.Repo.clone_from(WPT_GIT, WPT_LOCAL_CHECKOUT_PATH)
     wpt_repo = git.Repo(WPT_LOCAL_CHECKOUT_PATH)
+    
+    # clone wpt ecma repositry
+    print('Clone ecma git repositry:', ECMA_GIT, 'to', ECMA_LOCAL_CHECKOUT_PATH)
+    ecma_repo = git.Repo.clone_from(ECMA_GIT, ECMA_LOCAL_CHECKOUT_PATH)
+    ecma_repo = git.Repo(ECMA_LOCAL_CHECKOUT_PATH)
+    
+    # clone wpt webgl repositry
+    print('Clone webgl git repositry:', WEBGL_GIT, 'to', WEBGL_LOCAL_CHECKOUT_PATH)
+    webgl_repo = git.Repo.clone_from(WEBGL_GIT, WEBGL_LOCAL_CHECKOUT_PATH)
+    webgl_repo = git.Repo(WEBGL_LOCAL_CHECKOUT_PATH)
 
     all_tests = get_all_tests()
 
@@ -111,25 +129,48 @@ def main():
     for api_name in all_tests.keys():
         print('Processing', api_name, '...')
 
-        if api_name == '2dcontext':
-            commit = WPT_COMMITS['html/canvas/element']
-        elif api_name in WPT_COMMITS.keys():
-            commit = WPT_COMMITS[api_name]
         
-        print('Checking out', commit, '...')
-        wpt_repo.git.checkout(commit)
-        g = git.Git(WPT_LOCAL_CHECKOUT_PATH)
+        if api_name == 'webgl':
+            commit = WEBGL_COMMIT
+            print('Checking out for', api_name, commit, '...')
+            webgl_repo.git.checkout(commit)
+            g = git.Git(WEBGL_LOCAL_CHECKOUT_PATH)
+        elif api_name == 'ecmascript':
+            commit = ECMA_COMMIT
+            print('Checking out for', api_name, commit, '...')
+            ecma_repo.git.checkout(commit)
+            g = git.Git(ECMA_LOCAL_CHECKOUT_PATH)
+        else:
+            if api_name == '2dcontext':
+                commit = WPT_COMMITS['html/canvas/element']
+            elif api_name in WPT_COMMITS.keys():
+                commit = WPT_COMMITS[api_name]
+            
+            print('Checking out for', api_name, commit, '...')
+            wpt_repo.git.checkout(commit)
+            g = git.Git(WPT_LOCAL_CHECKOUT_PATH)
 
         for test in all_tests[api_name]:
-            if api_name == '2dcontext':
-                test_file_path = test.replace('/2dcontext', 'html/canvas/element')
+            # Discard anything after and include '.html'
+            test_file_path = test.split(".html")[0]
+
+            if api_name == 'webgl':
+                test_file_path = test_file_path.replace('/webgl/conformance-suite', 'conformance-suites/1.0.3')
+            elif api_name == 'ecmascript':
+                test_file_path = test_file_path.replace('/ecmascript/tests', 'test')
+            elif api_name == '2dcontext':
+                test_file_path = test_file_path.replace('/2dcontext', 'html/canvas/element')
             else:
-                test_file_path = test[1:]
+                test_file_path = test_file_path[1:]
 
             try:
-                creation_date = g.log('--format=%aD', test_file_path).splitlines()[-1]
+                creation_date = g.log('--format=%aD', test_file_path + '.html').splitlines()[-1]
             except:
-                creation_date = ''
+                try:
+                    creation_date = g.log('--format=%aD', test_file_path + '.js').splitlines()[-1]
+                except:
+                    print('Unable to find creation date for', test)
+                    creation_date = ''
 
             data[test] = creation_date
             write_json_to_file(OUTPUT_JSON, data)
