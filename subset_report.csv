@@ -6,7 +6,7 @@ WebCryptoAPI,2,85,90,[],[],10,1
 content-security-policy,2,20,25,[],[],160,28
 css,2,50,55,[],[],1010,409
 dom,2,35,35,[],[],159,55
-ecmascript,2,35,35,[],[],20367,0
+ecmascript,2,35,35,[],[],20367,7153
 encrypted-media,2,80,90,[],[],11,10
 fetch,2,35,35,[],[],52,17
 fullscreen,2,80,80,[],[],0,0
@@ -20,9 +20,9 @@ subresource-integrity,2,100,100,[],[],1,1
 uievents,2,100,100,[],[],5,5
 upgrade-insecure-requests,2,55,55,[],[],55,0
 webaudio,2,15,35,[],[],154,23
-webgl,2,0,25,[],[],649,0
+webgl,2,0,25,[],[],649,162
 webmessaging,2,35,35,[],[],48,24
-websockets,2,35,35,[],[],73,20
+websockets,2,35,35,[],[],73,25
 webstorage,2,35,55,[],[],26,13
 workers,2,35,35,[],[],65,22
 xhr,2,35,65,[],[],24,11
