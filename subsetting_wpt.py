@@ -57,16 +57,11 @@ def read_common_passed_tests(tokens):
         session_result = read_results(token)
         session_results.append(session_result)
 
-    passed_tests = {}
-    failed_tests = {}
+    passed_tests = []
+    failed_tests = []
 
     for result in session_results:
         for api in result:
-            if api not in passed_tests:
-                passed_tests[api] = []
-            if api not in failed_tests:
-                failed_tests[api] = []
-
             for api_result in result[api]:
                 passed = True
                 for subtest in api_result['subtests']:
@@ -78,17 +73,18 @@ def read_common_passed_tests(tokens):
                 test = api_result['test']
 
                 if passed:
-                    if test in failed_tests[api]:
+                    if test in failed_tests:
                         continue
-                    if test in passed_tests[api]:
+                    if test in passed_tests:
                         continue
-                    passed_tests[api].append(test)
+                    passed_tests.append(test)
                 else:
-                    if test in passed_tests[api]:
-                        passed_tests[api].remove(test)
-                    if test in failed_tests[api]:
+                    if test in passed_tests:
+                        passed_tests.remove(test)
+                    if test in failed_tests:
                         continue
-                    failed_tests[api].append(test)
+                    failed_tests.append(test)
+
     return passed_tests
 
 
@@ -179,6 +175,16 @@ def read_json_file(file_name: str) -> dict:
     return data
 
 
+def get_common_passed_test(reference_results: list, api_name: str) -> list:
+    '''Return common passed test for seleceted api name'''
+    common_passed_test = []
+    api_path = "/" + api_name
+    for result in reference_results:
+        if result.startswith(api_path):
+            common_passed_test.append(result)
+    return common_passed_test
+
+
 def main():
     '''Entry point.'''
     # get published date
@@ -192,9 +198,6 @@ def main():
         print('Error:', test_creation_date_file, 'does not present. ')
         print('Please run "get_test_creation_date.py" first to get test age for all tests.')
         return
-
-    api_list_url = WMAS2019_SERVER_URL + 'api/tests/apis'
-    spec_apis = send_request(api_list_url)
     
     input_data = read_json_file(INPUT_FILE)
 
@@ -206,8 +209,7 @@ def main():
 
     data = {}
     report = []
-    for api in spec_apis:
-        api_name = api['title']
+    for api_name in input_data:
         print('Processing ', api_name, '...')
 
         api_input_data = input_data[api_name]
@@ -218,7 +220,7 @@ def main():
         must_include_list = api_input_data['must_include_list']
 
         # start from common passed tests for reference browsers
-        api_tests = reference_results[api_name]
+        api_tests = get_common_passed_test(reference_results, api_name)
         # eliminate tests in block list
         api_tests_after_eliminate_block = eliminate_block(api_tests, block_list)
         # select random test by weight

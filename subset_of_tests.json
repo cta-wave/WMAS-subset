@@ -49,13 +49,15 @@
         "/content-security-policy/worker-src/dedicated-self.sub.html",
         "/content-security-policy/reporting-api/reporting-api-doesnt-send-reports-without-violation.https.sub.html"
     ],
-    "css": [
+    "css/compositing": [
         "/css/compositing/parsing/background-blend-mode-computed.html",
         "/css/compositing/parsing/background-blend-mode-invalid.html",
         "/css/compositing/parsing/background-blend-mode-valid.html",
         "/css/compositing/parsing/isolation-computed.html",
         "/css/compositing/parsing/mix-blend-mode-computed.html",
-        "/css/compositing/parsing/mix-blend-mode-invalid.html",
+        "/css/compositing/parsing/mix-blend-mode-invalid.html"
+    ],
+    "css/css-animations": [
         "/css/css-animations/animation-iteration-count-calc.html",
         "/css/css-animations/animationevent-types.html",
         "/css/css-animations/parsing/animation-computed.html",
@@ -70,7 +72,9 @@
         "/css/css-animations/parsing/animation-name-computed.html",
         "/css/css-animations/parsing/animation-name-valid.html",
         "/css/css-animations/parsing/animation-play-state-invalid.html",
-        "/css/css-animations/parsing/animation-shorthand.html",
+        "/css/css-animations/parsing/animation-shorthand.html"
+    ],
+    "css/css-backgrounds": [
         "/css/css-backgrounds/animations/background-color-interpolation.html",
         "/css/css-backgrounds/animations/background-position-interpolation.html",
         "/css/css-backgrounds/animations/background-size-interpolation.html",
@@ -125,16 +129,24 @@
         "/css/css-backgrounds/parsing/border-style-valid.html",
         "/css/css-backgrounds/parsing/border-valid.html",
         "/css/css-backgrounds/parsing/border-width-valid.html",
-        "/css/css-backgrounds/parsing/box-shadow-invalid.html",
-        "/css/css-cascade/parsing/all-valid.html",
+        "/css/css-backgrounds/parsing/box-shadow-invalid.html"
+    ],
+    "css/css-cascade": [
+        "/css/css-cascade/parsing/all-valid.html"
+    ],
+    "css/css-color": [
         "/css/css-color/animation/color-interpolation.html",
         "/css/css-color/color-resolving-hsl.html",
         "/css/css-color/color-resolving.html",
         "/css/css-color/parsing/color-invalid.html",
         "/css/css-color/parsing/color-valid.html",
         "/css/css-color/parsing/opacity-computed.html",
-        "/css/css-color/rgb-rounding-001.html",
-        "/css/css-conditional/test_group_insertRule.html",
+        "/css/css-color/rgb-rounding-001.html"
+    ],
+    "css/css-conditional": [
+        "/css/css-conditional/test_group_insertRule.html"
+    ],
+    "css/css-flexbox": [
         "/css/css-flexbox/animation/flex-basis-interpolation.html",
         "/css/css-flexbox/animation/order-interpolation.html",
         "/css/css-flexbox/display_flex_exist.html",
@@ -173,7 +185,9 @@
         "/css/css-flexbox/parsing/flex-invalid.html",
         "/css/css-flexbox/parsing/flex-shorthand.html",
         "/css/css-flexbox/parsing/flex-shrink-invalid.html",
-        "/css/css-flexbox/parsing/flex-shrink-valid.html",
+        "/css/css-flexbox/parsing/flex-shrink-valid.html"
+    ],
+    "css/css-fonts": [
         "/css/css-fonts/animations/font-size-adjust-interpolation.html",
         "/css/css-fonts/animations/font-size-interpolation-002.html",
         "/css/css-fonts/calc-in-font-variation-settings.html",
@@ -212,7 +226,9 @@
         "/css/css-fonts/parsing/font-variation-settings-valid.html",
         "/css/css-fonts/parsing/font-weight-invalid.html",
         "/css/css-fonts/parsing/font-weight-valid.html",
-        "/css/css-fonts/variations/font-weight-matching.html",
+        "/css/css-fonts/variations/font-weight-matching.html"
+    ],
+    "css/css-grid": [
         "/css/css-grid/abspos/absolute-positioning-grid-container-containing-block-001.html",
         "/css/css-grid/abspos/grid-positioned-items-gaps-001.html",
         "/css/css-grid/abspos/grid-sizing-positioned-items-001.html",
@@ -239,7 +255,9 @@
         "/css/css-grid/grid-model/grid-computed-value-display-floated-items-001.html",
         "/css/css-grid/grid-model/grid-item-accepts-first-letter-001.html",
         "/css/css-grid/grid-model/grid-item-accepts-first-line-001.html",
-        "/css/css-grid/grid-model/grid-support-display-001.html",
+        "/css/css-grid/grid-model/grid-support-display-001.html"
+    ],
+    "css/css-images": [
         "/css/css-images/parsing/gradient-position-valid.html",
         "/css/css-images/parsing/image-orientation-invalid.html",
         "/css/css-images/parsing/image-orientation-valid.html",
@@ -249,7 +267,9 @@
         "/css/css-images/parsing/object-fit-invalid.html",
         "/css/css-images/parsing/object-position-computed.html",
         "/css/css-images/parsing/object-position-invalid.html",
-        "/css/css-images/parsing/object-position-valid.html",
+        "/css/css-images/parsing/object-position-valid.html"
+    ],
+    "css/css-multicol": [
         "/css/css-multicol/animation/column-count-interpolation.html",
         "/css/css-multicol/multicol-gap-animation-003.html",
         "/css/css-multicol/parsing/column-count-valid.html",
@@ -259,7 +279,11 @@
         "/css/css-multicol/parsing/column-rule-width-valid.html",
         "/css/css-multicol/parsing/column-width-invalid.html",
         "/css/css-multicol/parsing/columns-invalid.html",
-        "/css/css-multicol/parsing/columns-valid.html",
+        "/css/css-multicol/parsing/columns-valid.html"
+    ],
+    "css/css-namespaces": [],
+    "css/css-style-attr": [],
+    "css/css-syntax": [
         "/css/css-syntax/cdc-vs-ident-tokens.html",
         "/css/css-syntax/charset/page-utf16-css-bomless-utf16.html",
         "/css/css-syntax/charset/page-utf16-css-bomless-utf16be.html",
@@ -271,7 +295,9 @@
         "/css/css-syntax/charset/page-windows-1251-css-http-bogus-at-charset-windows-1250.html",
         "/css/css-syntax/charset/page-windows-1251-css-utf8-bom.html",
         "/css/css-syntax/inclusive-ranges.html",
-        "/css/css-syntax/unclosed-url-at-eof.html",
+        "/css/css-syntax/unclosed-url-at-eof.html"
+    ],
+    "css/css-transforms": [
         "/css/css-transforms/animation/list-interpolation.html",
         "/css/css-transforms/animation/perspective-interpolation.html",
         "/css/css-transforms/animation/perspective-origin-interpolation.html",
@@ -296,7 +322,9 @@
         "/css/css-transforms/transform_translate_invalid.html",
         "/css/css-transforms/transform_translate_max.html",
         "/css/css-transforms/transform_translate_neg.html",
-        "/css/css-transforms/transform_translate_second_omited.html",
+        "/css/css-transforms/transform_translate_second_omited.html"
+    ],
+    "css/css-transitions": [
         "/css/css-transitions/animations/z-index-interpolation.html",
         "/css/css-transitions/before-load-001.html",
         "/css/css-transitions/disconnected-element-001.html",
@@ -312,7 +340,9 @@
         "/css/css-transitions/transition-001.html",
         "/css/css-transitions/transition-background-position-with-edge-offset.html",
         "/css/css-transitions/transition-property-001.html",
-        "/css/css-transitions/transition-reparented.html",
+        "/css/css-transitions/transition-reparented.html"
+    ],
+    "css/css-ui": [
         "/css/css-ui/animation/outline-color-interpolation.html",
         "/css/css-ui/animation/outline-offset-interpolation.html",
         "/css/css-ui/animation/outline-width-interpolation.html",
@@ -338,7 +368,9 @@
         "/css/css-ui/parsing/user-select-invalid.html",
         "/css/css-ui/parsing/user-select-valid.html",
         "/css/css-ui/text-overflow-ellipsis-abspos-in-inline-block-crash-001.html",
-        "/css/css-ui/text-overflow-ellipsis-width-001.html",
+        "/css/css-ui/text-overflow-ellipsis-width-001.html"
+    ],
+    "css/css-values": [
         "/css/css-values/animations/calc-interpolation.html",
         "/css/css-values/calc-angle-values.html",
         "/css/css-values/calc-in-color-001.html",
@@ -355,7 +387,9 @@
         "/css/css-values/minmax-percentage-serialize.html",
         "/css/css-values/minmax-time-computed.html",
         "/css/css-values/minmax-time-serialize.html",
-        "/css/css-values/viewport-relative-lengths-scaled-viewport.html",
+        "/css/css-values/viewport-relative-lengths-scaled-viewport.html"
+    ],
+    "css/css-variables": [
         "/css/css-variables/variable-created-document.html",
         "/css/css-variables/variable-created-element.html",
         "/css/css-variables/variable-definition-border-shorthand-serialize.html",
@@ -363,7 +397,9 @@
         "/css/css-variables/variable-reference-variable.html",
         "/css/css-variables/variable-substitution-plus-box-shadow.html",
         "/css/css-variables/variable-substitution-shadow-properties.html",
-        "/css/css-variables/variable-transitions-transition-property-all-before-value.html",
+        "/css/css-variables/variable-transitions-transition-property-all-before-value.html"
+    ],
+    "css/css-writing-modes": [
         "/css/css-writing-modes/bidi-line-break-001.html",
         "/css/css-writing-modes/parsing/direction-invalid.html",
         "/css/css-writing-modes/parsing/direction-valid.html",
@@ -371,7 +407,9 @@
         "/css/css-writing-modes/parsing/unicode-bidi-invalid.html",
         "/css/css-writing-modes/parsing/writing-mode-computed.html",
         "/css/css-writing-modes/parsing/writing-mode-invalid.html",
-        "/css/css-writing-modes/unicode-bidi-parsing-002.html",
+        "/css/css-writing-modes/unicode-bidi-parsing-002.html"
+    ],
+    "css/CSS2": [
         "/css/CSS2/floats/hit-test-floats-001.html",
         "/css/CSS2/floats/list-item-taller-than-opportunity-001.html",
         "/css/CSS2/floats/zero-space-between-floats-003.html",
@@ -385,7 +423,9 @@
         "/css/CSS2/normal-flow/containing-block-percent-margin-right.html",
         "/css/CSS2/normal-flow/containing-block-percent-padding-bottom.html",
         "/css/CSS2/normal-flow/containing-block-percent-padding-top.html",
-        "/css/CSS2/normal-flow/unresolvable-min-height.html",
+        "/css/CSS2/normal-flow/unresolvable-min-height.html"
+    ],
+    "css/cssom-view": [
         "/css/cssom-view/CaretPosition-001.html",
         "/css/cssom-view/client-props-inline-list-item.html",
         "/css/cssom-view/cssom-getBoundingClientRect-002.html",
@@ -419,7 +459,9 @@
         "/css/cssom-view/ttwf-js-cssomview-getclientrects-length.html",
         "/css/cssom-view/window-screen-height-immutable.html",
         "/css/cssom-view/window-screen-height.html",
-        "/css/cssom-view/window-screen-width.html",
+        "/css/cssom-view/window-screen-width.html"
+    ],
+    "css/filter-effects": [
         "/css/filter-effects/animation/backdrop-filter-interpolation-003.html",
         "/css/filter-effects/animation/filter-interpolation-004.html",
         "/css/filter-effects/parsing/backdrop-filter-computed.html",
@@ -430,7 +472,10 @@
         "/css/filter-effects/parsing/flood-color-computed.html",
         "/css/filter-effects/parsing/flood-color-invalid.html",
         "/css/filter-effects/parsing/lighting-color-computed.html",
-        "/css/filter-effects/parsing/lighting-color-parsing-invalid.html",
+        "/css/filter-effects/parsing/lighting-color-parsing-invalid.html"
+    ],
+    "css/mediaqueries": [],
+    "css/selectors": [
         "/css/selectors/i18n/css3-selectors-lang-005.html",
         "/css/selectors/i18n/css3-selectors-lang-006.html",
         "/css/selectors/i18n/css3-selectors-lang-008.html",
