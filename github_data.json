@@ -1,0 +1,170 @@
+{
+	"2018": {
+		"wpt": {
+			"local_path": "wpt",
+			"git_path": "https://github.com/web-platform-tests/wpt.git",
+			"commit": "4bdeca6b451519a7f60f592468600e0a6cbfc42b"
+		},
+		"ecmascript": {
+			"local_path": "ecmascript",
+			"git_path": "https://github.com/tc39/test262.git",
+			"commit": "5e653f2e6ca14ac1ad8e801955a709cae7ac8a11"
+		},
+		"webgl": {
+			"local_path": "webgl",
+			"git_path": "https://github.com/KhronosGroup/WebGL.git",
+			"commit": "0c1173e509ccbc3a1135f86ea6f3b3e4757bb96c"
+		},
+		"wave-extra": {
+			"local_path": "wave-cookies",
+			"git_path": "https://github.com/fraunhoferfokus/WMATS2018-cookies.git",
+			"commit": "master"
+		}
+	},
+	"2019": {
+		"wpt": {
+			"local_path": "wpt",
+			"git_path": "https://github.com/web-platform-tests/wpt.git",
+			"commit": {
+				"dom": "cffa949fc9e0fcda9039f3275470ef7a663a7d6c",
+				"websockets": "b83ec322c2c9dbeba625d94351a69136f8584629",
+				"webmessaging": "7287608f90f6b9530635d10086fd2ab386faab38",
+				"webstorage": "a5f707c18b3d893a6e332994064911c2f11e800d",
+				"workers": "66e29f00f5ac4b42175342c15927b9efaf4dc19f",
+				"encrypted-media": "5845bba1671bad710561b6b6e5825989878bb44c",
+				"media-source": "e0dc0f1a554ed116efa992a7095def76c58e13ee",
+				"webaudio": "67152fdecd6e7955f934a4aec9a15407cbcfa3ac",
+				"fullscreen": "7287608f90f6b9530635d10086fd2ab386faab38",
+				"fetch": "d3a7b003821596386fb708fe18decf696c563277",
+				"xhr": "30cb639eaaa1c3bbd4eabee9c50685dc98cad2af",
+				"content-security-policy": "94d018bb5d7c0d46df7ba1ac1efdbaa88bc159dc",
+				"subresource-integrity": "8fefedccb9ae49bddd9c84d22b21177f156a561e",
+				"upgrade-insecure-requests": "b4b88e7de8f61c8c8fe1ac615fd883b3a042709f",
+				"WebCryptoAPI": "14236258ece08c439179427a25f0a2102f5664df",
+				"page-visibility": "df24fb604e2d40528ac1d1b5dd970e32fc5c2978",
+				"IndexedDB": "b57479444fa21e2854dfb876f36f14f437ef7e35",
+				"FileAPI": "648205dcf15d75c37b7abe7a0c1a2a7128baea36",
+				"notifications": "a5f707c18b3d893a6e332994064911c2f11e800d",
+				"service-workers": "b26c9dcf86ba2f91e2ea20ad72d67c0ce51b5b5d",
+				"uievents": "66ec292ee48a9a2bbfa2f556e614926cd07211aa",
+				"css/CSS2": "35979641de0b29313f7f28ab352d380186754ecd",
+				"css/compositing": "5d0dcf0142d07916584db9c76c2fdec02833e959",
+				"css/css-animations": "f6acb6c0316cabf895c8c47dc654e77ef4b2a287",
+				"css/css-backgrounds": "398cdfa444185dda88ca6e87fb12096bc8a82199",
+				"css/css-ui": "545c96ead1616661ce2e97b66450efcf1b032851",
+				"css/css-cascade": "84ec2ed74115b1c2ca72765b458f3a5d4da792dc",
+				"css/css-color": "b6e84edf4a398cc48f4983cbd8398858816996ae",
+				"css/css-conditional": "01bda5c03bf8ae4ee00251b8969adf1ef69f443d",
+				"css/css-variables": "b1f24df9a2e449e0545bf6d74b62c0a40c543fde",
+				"css/css-flexbox": "9d6f1c1aa7e1daa62c350b3fec18d594792f408a",
+				"css/css-fonts": "3d83b8688bbd6d9e2a7fc31021bc214cbf0ebcb7",
+				"css/css-grid": "94c4df86480774d00dbc9451eb4ffd9c4f3e233f",
+				"css/css-images": "0624a18c9ebc3cc710d1e54dfd5adb5a0a829c42",
+				"css/css-multicol": "c0b406d151940c4253d59c041d895e763c27e754",
+				"css/css-namespaces": "29f50c937e8be8ccf73dbb8b8e74f0668a1cd426",
+				"css/css-style-attr": "a5f707c18b3d893a6e332994064911c2f11e800d",
+				"css/css-syntax": "3696f2233a37437896505b7187968aa605be9255",
+				"css/css-transforms": "5f0da8e0ee156d0561ebcb9c9304dedd06119bd8",
+				"css/css-transitions": "2ed850a370f099478001a7ae6bb765d38dab8057",
+				"css/css-values": "861e227caba7dc9341dd833518f0d01b1e02d0a4",
+				"css/css-writing-modes": "1799625e205a4457d879b6b9a3f74365f3b9cfd3",
+				"css/cssom-view": "3806bf2419e25bd57e70b42103478fd3c12a143b",
+				"css/filter-effects": "98ed5928328dd2121d13752ec7c84e1e29c39f4b",
+				"css/mediaqueries": "b09e7e2e78695b5e2052bfadd941de602f1e16fb",
+				"css/selectors": "eff766e5c8c39be7b9bff064bce3a18eb2953ac5",
+				"html": "db2276bb4b19da6818db5301b49dcbbc3f4c136e",
+				"2dcontext": "178b6bcde9cbb1d8e04076fe59c86ea94f122964"
+			}
+		},
+		"ecmascript": {
+			"local_path": "ecmascript",
+			"git_path": "https://github.com/tc39/test262.git",
+			"commit": "163fae3e68998c1a69e1e6825bf34e89b76cff58"
+		},
+		"webgl": {
+			"local_path": "webgl",
+			"git_path": "https://github.com/KhronosGroup/WebGL.git",
+			"commit": "495b85b3505837566e724e9f595354149af547f9"
+		}
+	},
+	"2021": {
+		"wpt": {
+			"local_path": "wpt",
+			"git_path": "https://github.com/web-platform-tests/wpt.git",
+			"commit": {
+				"dom": "f7e7059d3772fed15cb7389daa3b17ccce32d1c5",
+				"html": "351e1ce8543ff88a1a14daa2e18d3d0cfbc52613",
+				"websockets": "b83ec322c2c9dbeba625d94351a69136f8584629",
+				"webmessaging": "02ebfda73367c0419e19f83048fa5895a78cb418",
+				"webstorage": "a7ff355e88929913036932ed16598b4682541d59",
+				"workers": "59873545965cc737221c40c4004f2a3c9ce23f28",
+				"css/CSS2": "35979641de0b29313f7f28ab352d380186754ecd",
+				"css/compositing": "5d0dcf0142d07916584db9c76c2fdec02833e959",
+				"css/css-animations": "f6acb6c0316cabf895c8c47dc654e77ef4b2a287",
+				"css/css-backgrounds": "4c83511984d28d692a68de2330a844183b9d488e",
+				"css/css-ui": "545c96ead1616661ce2e97b66450efcf1b032851",
+				"css/css-cascade": "9ad6ebf9fff00dcd46d6c5438ebbd0f7e71c15f8",
+				"css/css-color": "1d6ace2d5bfaa1d55e7cf1c6803c54e6567e7585",
+				"css/css-conditional": "01bda5c03bf8ae4ee00251b8969adf1ef69f443d",
+				"css/css-variables": "dfd2e8569778e2a8409d47b529bd062f7ce862b5",
+				"css/css-easing": "9f47205824fa25eca5d9ab2c87a016a7c5c4df3a",
+				"css/css-flexbox": "9d6f1c1aa7e1daa62c350b3fec18d594792f408a",
+				"css/css-font-loading": "2ed60cb4b19a1b1695d38fed4060bb9f62f9f3bb",
+				"css/css-fonts": "3d83b8688bbd6d9e2a7fc31021bc214cbf0ebcb7",
+				"css/css-grid": "6faff25614baf1cedbb02c92c4b016e952e303b2",
+				"css/css-images": "48e3fd2f4d41fa00640d27738bdda07db95594cc",
+				"css/css-multicol": "d625d30d9c6e6634fcac316d094af314accca8a2",
+				"css/css-namespaces": "29f50c937e8be8ccf73dbb8b8e74f0668a1cd426",
+				"css/css-scroll-snap": "5ff83eee19a770bba7396c0688a265970c6ed342",
+				"css/css-shapes": "1cae03c4c11acf12fe20722e5eda3513df9dd79c",
+				"css/css-style-attr": "a5f707c18b3d893a6e332994064911c2f11e800d",
+				"css/css-syntax": "3696f2233a37437896505b7187968aa605be9255",
+				"css/css-text-decor": "c04dd6a79ab11d2c8cf5e0c69848d7b518a30b76",
+				"css/css-transforms": "5f0da8e0ee156d0561ebcb9c9304dedd06119bd8",
+				"css/css-transitions": "2ed850a370f099478001a7ae6bb765d38dab8057",
+				"css/css-values": "861e227caba7dc9341dd833518f0d01b1e02d0a4",
+				"css/css-will-change": "e5456864c2964700255ba32ea59c1aa46ad1155c",
+				"css/css-writing-modes": "6085f658ace31a3c962a69d5128cc7e66d79cbb9",
+				"css/cssom-view": "3806bf2419e25bd57e70b42103478fd3c12a143b",
+				"css/filter-effects": "98ed5928328dd2121d13752ec7c84e1e29c39f4b",
+				"css/mediaqueries": "b09e7e2e78695b5e2052bfadd941de602f1e16fb",
+				"css/selectors": "eff766e5c8c39be7b9bff064bce3a18eb2953ac5",
+				"encrypted-media": "5845bba1671bad710561b6b6e5825989878bb44c",
+				"media-capabilities": "19f945496f5d6f24d81f41b65fcd912e85b323b6",
+				"media-source": "e0dc0f1a554ed116efa992a7095def76c58e13ee",
+				"webaudio": "6a6a92e48d907b3c5a9b2be2386aecc4e67c8b99",
+				"fullscreen": "d4beec831b7484382a25bca41b1449b68c235d0a",
+				"2dcontext": "d3ec3f4e594a902b99c4d0b7ab9122f215e2a543",
+				"fetch": "d3d67f35d9bfe830ccdb0c070cab75ef5b0211c6",
+				"xhr": "d3d67f35d9bfe830ccdb0c070cab75ef5b0211c6",
+				"content-security-policy": "94d018bb5d7c0d46df7ba1ac1efdbaa88bc159dc",
+				"referrer-policy": "cd9e10befb1edcbb7d04e06ef7255e56c72c07e8",
+				"subresource-integrity": "8fefedccb9ae49bddd9c84d22b21177f156a561e",
+				"upgrade-insecure-requests": "b4b88e7de8f61c8c8fe1ac615fd883b3a042709f",
+				"WebCryptoAPI": "14236258ece08c439179427a25f0a2102f5664df",
+				"beacon": "a341862f7bf55470eb456fbdbb20e465508e7cb9",
+				"hr-time": "57747da202f050d84df2b73e5821a56b18af66f7",
+				"navigation-timing": "df24fb604e2d40528ac1d1b5dd970e32fc5c2978",
+				"page-visibility": "df24fb604e2d40528ac1d1b5dd970e32fc5c2978",
+				"performance-timeline": "8e4cf682fda6465fb385433640cc0340c80d5a71",
+				"resource-timing": "794e5cbf23f420cc4394207f22135344255f66aa",
+				"user-timing": "df24fb604e2d40528ac1d1b5dd970e32fc5c2978",
+				"IndexedDB": "b57479444fa21e2854dfb876f36f14f437ef7e35",
+				"FileAPI": "c02cefef25635e730deb415e2d3a749a46f70402",
+				"notifications": "2c5c3c4c27d27a419c1fdba3e9879c2d22037074",
+				"service-workers": "b26c9dcf86ba2f91e2ea20ad72d67c0ce51b5b5d",
+				"uievents": "393d88d184b7981a9ebcaf49dd38dd253a1f2534"
+			}
+		},
+		"ecmascript": {
+			"local_path": "ecmascript",
+			"git_path": "https://github.com/tc39/test262.git",
+			"commit": "ebb6c34fa5dd76a6bea01c54ed7b182596492176"
+		},
+		"webgl": {
+			"local_path": "webgl",
+			"git_path": "https://github.com/KhronosGroup/WebGL.git",
+			"commit": "495b85b3505837566e724e9f595354149af547f9"
+		}
+	}
+}

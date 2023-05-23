@@ -3,20 +3,13 @@ Output a list of selected subset of tests in a json file
 '''
 import hashlib
 import requests
-import json
-import csv
 import os.path
 from datetime import datetime
 
-# -------------------Manaul input parameters----------------------------
+from file_utility import (
+    read_json_file, write_json_to_file, write_report_to_file
+)
 
-WMAS2019_SERVER_URL = 'https://webapitests2019.ctawave.org/wave/'
-WMAS2019_published_date = '2019/12/04 00:00:00 +0000'
-
-# further input parameters are defined in the following json file
-INPUT_FILE = 'WMAS2019_input.json'
-
-# -------------------End of manaul input parameters---------------------
 
 def send_request(request_api):
     '''Send api request and return json report'''
@@ -28,9 +21,9 @@ def send_request(request_api):
               ' response status:', response.status_code)
 
   
-def read_results(token):
+def read_results(url: str, token: str):
     '''Read result for given session token'''
-    result_api_url = WMAS2019_SERVER_URL + 'api/results/' + token
+    result_api_url = url + 'api/results/' + token
     
     results = send_request(result_api_url)
 
@@ -44,7 +37,7 @@ def read_results(token):
     return return_results
 
         
-def read_common_passed_tests(tokens):
+def read_common_passed_tests(url: str, tokens: str):
     '''
     STEP 1: Start from the set of tests that pass on the reference browser versions 
     and existed at the appropriate cut-off date for the WMAS version to be tested
@@ -54,7 +47,7 @@ def read_common_passed_tests(tokens):
     session_results = []
 
     for token in tokens:
-        session_result = read_results(token)
+        session_result = read_results(url, token)
         session_results.append(session_result)
 
     passed_tests = []
@@ -149,32 +142,6 @@ def add_back_must_include(selected_tests, must_include_list):
     return selected_tests
 
 
-def write_report_to_file(file_name: str, data: dict):
-    '''Write subsetting report to a csv file'''
-    header = ['API Name', 'Cut Off Age(year)',
-              'Percentage Of Recent', 'Percentage Of Established',
-              'Block List', 'Must Include List',
-              'Number of Common Passed Tests', 'Selected Test Count']
-
-    with open(file_name, 'w', newline='', encoding='UTF8') as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-        writer.writerows(data)
-
-
-def write_json_to_file(file_name: str, data: dict):
-    '''Write JSON date to a file'''
-    with open(file_name, 'w') as outfile:
-        json.dump(data, outfile, indent=4, separators=(',', ': '), default=str)
-
-
-def read_json_file(file_name: str) -> dict:
-    '''Read date from a json file'''
-    with open(file_name, 'rt') as file:
-        data = json.load(file)
-    return data
-
-
 def get_common_passed_test(reference_results: list, api_name: str) -> list:
     '''Return common passed test for seleceted api name'''
     common_passed_test = []
@@ -185,13 +152,16 @@ def get_common_passed_test(reference_results: list, api_name: str) -> list:
     return common_passed_test
 
 
-def main():
-    '''Entry point.'''
-    # get published date
-    published_date = datetime.strptime(WMAS2019_published_date, '%Y/%m/%d %H:%M:%S %z')
+def process_subsetting(
+         version: str, published_date: str, server_url: str
+    ):
+    '''Process Subsetting'''
+    test_creation_date_file = 'WMAS' + version + '_test_creation_date.json'
+    input_file = 'WMAS' + version + '_input.json'
+    report_file = 'WMAS' + version + '_subset_report.csv'
+    output_file = 'WMAS' + version + '_subset_of_tests.json'
 
     # get test age from 'test_creation_date.json'
-    test_creation_date_file = 'test_creation_date.json'
     if os.path.exists(test_creation_date_file):
         creation_date_data = read_json_file(test_creation_date_file)
     else:
@@ -199,13 +169,13 @@ def main():
         print('Please run "get_test_creation_date.py" first to get test age for all tests.')
         return
     
-    input_data = read_json_file(INPUT_FILE)
+    input_data = read_json_file(input_file)
 
-    session_api_url = WMAS2019_SERVER_URL + 'api/sessions/public'
+    session_api_url = server_url + 'api/sessions/public'
     reference_tokens = send_request(session_api_url)
     
     print('Getting common passed tests for reference browsers: ', reference_tokens)
-    reference_results = read_common_passed_tests(reference_tokens)
+    reference_results = read_common_passed_tests(server_url, reference_tokens)
 
     data = {}
     report = []
@@ -238,8 +208,43 @@ def main():
                       percentage_of_established, block_list, must_include_list,
                       len(api_tests), len(selected_tests)])
 
-    write_report_to_file('subset_report.csv', report)
-    write_json_to_file('subset_of_tests.json', data)
+    header = ['API Name', 'Cut Off Age(year)',
+              'Percentage Of Recent', 'Percentage Of Established',
+              'Block List', 'Must Include List',
+              'Number of Common Passed Tests', 'Selected Test Count']
+    write_report_to_file(report_file, header, report)
+    write_json_to_file(output_file, data)
+
+
+def wmas2018_subsetting():
+    '''subsetting for wmas2018'''
+    version = '2018'
+    published_date = datetime.strptime('2018/12/13 00:00:00 +0000', '%Y/%m/%d %H:%M:%S %z')
+    server_url = 'https://webapitests' + version +'.ctawave.org/wave/'
+    process_subsetting(version, published_date, server_url)
+
+
+def wmas2019_subsetting():
+    '''subsetting for wmas2019'''
+    version = '2019'
+    published_date = datetime.strptime('2019/12/04 00:00:00 +0000', '%Y/%m/%d %H:%M:%S %z')
+    server_url = 'https://webapitests' + version +'.ctawave.org/wave/'
+    process_subsetting(version, published_date, server_url)
+
+
+def wmas2021_subsetting():
+    '''subsetting for wmas2021'''
+    version = '2021'
+    published_date = datetime.strptime('2021/12/14 00:00:00 +0000', '%Y/%m/%d %H:%M:%S %z')
+    server_url = 'https://webapitests' + version +'.ctawave.org/_wave/'
+    process_subsetting(version, published_date, server_url)
+
+
+def main():
+    '''Entry point.'''
+    wmas2018_subsetting()
+    wmas2019_subsetting()
+    wmas2021_subsetting()
 
 
 if __name__ == '__main__':
