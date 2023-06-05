@@ -18,6 +18,9 @@ Note that CTA is not responsible for identifying any patents for which a license
 or scope of those patents that are brought to its attention. For further IPR information, see Section 15 of EP-23: 
 https://standards.cta.tech/kwspub/rules/CTA-EP-23-T.pdf.
 
+### Process
+Test subset is available for the WMAS versions (WMAS 2018, WMAS 2019 and WMAS 2021). Process of selecting WMAS test subset can be found [here](./Subsetting_WPT_Tests.md).
+
 ### Requirement
 
 Python 3.6 or greater must be installed.
