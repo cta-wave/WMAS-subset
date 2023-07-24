@@ -293,10 +293,38 @@
 		"block_list":[],
 		"must_include_list":[]
 	},
-	"ecmascript":{
+	"ecmascript/tests/annexB":{
 		"cut_off_age":2,
 		"percentage_of_recent":35,
 		"percentage_of_established":35,
+		"block_list":[],
+		"must_include_list":[]
+	},
+	"ecmascript/tests/built-ins":{
+		"cut_off_age":2,
+		"percentage_of_recent":10,
+		"percentage_of_established":10,
+		"block_list":[],
+		"must_include_list":[]
+	},
+	"ecmascript/tests/harness":{
+		"cut_off_age":2,
+		"percentage_of_recent":35,
+		"percentage_of_established":35,
+		"block_list":[],
+		"must_include_list":[]
+	},
+	"ecmascript/tests/intl402":{
+		"cut_off_age":2,
+		"percentage_of_recent":35,
+		"percentage_of_established":35,
+		"block_list":[],
+		"must_include_list":[]
+	},
+	"ecmascript/tests/language":{
+		"cut_off_age":2,
+		"percentage_of_recent":15,
+		"percentage_of_established":15,
 		"block_list":[],
 		"must_include_list":[]
 	},

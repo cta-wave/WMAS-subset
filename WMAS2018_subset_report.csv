@@ -41,5 +41,9 @@ content-security-policy,2,20,25,[],[],124,21
 dom,2,35,35,[],[],194,68
 fetch,2,35,35,[],[],59,25
 FileAPI,2,100,100,[],[],8,8
-ecmascript,2,35,35,[],[],13350,4600
+ecmascript/tests/annexB,2,35,35,[],[],36,12
+ecmascript/tests/built-ins,2,10,10,[],[],9675,902
+ecmascript/tests/harness,2,35,35,[],[],53,15
+ecmascript/tests/intl402,2,35,35,[],[],130,38
+ecmascript/tests/language,2,15,15,[],[],3456,485
 workers,2,35,35,[],[],105,39

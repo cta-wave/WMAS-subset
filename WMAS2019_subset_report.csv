@@ -1,5 +1,5 @@
 API Name,Cut Off Age(year),Percentage Of Recent,Percentage Of Established,Block List,Must Include List,Number of Common Passed Tests,Selected Test Count
-2dcontext,2,100,100,[],[],723,0
+2dcontext,2,5,10,[],[],723,0
 FileAPI,2,100,100,[],[],23,4
 IndexedDB,2,80,80,[],[],9,8
 WebCryptoAPI,2,85,90,[],[],10,2
@@ -30,7 +30,11 @@ css/filter-effects,2,50,55,[],[],24,11
 css/mediaqueries,2,50,55,[],[],1,0
 css/selectors,2,50,55,[],[],96,28
 dom,2,35,35,[],[],159,56
-ecmascript,2,35,35,[],[],20367,7153
+ecmascript/tests/annexB,2,35,35,[],[],667,232
+ecmascript/tests/built-ins,2,10,10,[],[],11804,1127
+ecmascript/tests/harness,2,35,35,[],[],63,23
+ecmascript/tests/intl402,2,35,35,[],[],163,46
+ecmascript/tests/language,2,15,15,[],[],7670,1084
 encrypted-media,2,80,90,[],[],11,10
 fetch,2,35,35,[],[],52,21
 fullscreen,2,80,80,[],[],0,0

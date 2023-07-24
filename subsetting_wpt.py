@@ -202,6 +202,7 @@ def process_subsetting(
                                                        published_date)
         # add back must include tests
         selected_tests = add_back_must_include(selected_tests_by_random_hashing, must_include_list)
+        selected_tests.sort()
         data[api_name] = selected_tests
 
         report.append([api_name,cut_off_age, percentage_of_recent, 
