@@ -1,10 +1,10 @@
 API Name,Cut Off Age(year),Percentage Of Recent,Percentage Of Established,Block List,Must Include List,Number of Common Passed Tests,Selected Test Count
-2dcontext,2,5,10,[],[],761,38
+2dcontext,2,5,10,[],[],761,80
 FileAPI,2,100,100,[],[],53,37
 IndexedDB,2,80,80,[],[],9,8
 WebCryptoAPI,2,85,90,[],[],36,18
 beacon,2,50,50,[],[],7,2
-content-security-policy,2,20,25,[],[],337,83
+content-security-policy,2,20,25,[],[],337,84
 css/CSS2,2,50,55,[],[],41,25
 css/compositing,2,50,55,[],[],11,6
 css/css-animations,2,50,55,[],[],56,30
@@ -13,7 +13,7 @@ css/css-cascade,2,50,55,[],[],7,3
 css/css-color,2,50,55,[],[],16,8
 css/css-conditional,2,50,55,[],[],3,2
 css/css-easing,2,50,50,[],[],3,1
-css/css-flexbox,2,50,55,[],[],227,97
+css/css-flexbox,2,50,55,[],[],227,98
 css/css-font-loading,2,50,50,[],[],10,4
 css/css-fonts,2,50,55,[],[],78,48
 css/css-grid,2,50,55,[],[],272,152
@@ -41,16 +41,16 @@ ecmascript/tests/harness,2,35,35,[],[],93,36
 ecmascript/tests/intl402,2,35,35,[],[],823,344
 ecmascript/tests/language,2,15,15,[],[],12938,1817
 encrypted-media,2,80,90,[],[],25,22
-fetch,2,35,35,[],[],341,99
+fetch,2,35,35,[],[],341,91
 fullscreen,2,80,80,[],[],9,5
-hr-time,2,50,50,[],[],9,4
-html,2,0,20,[],[],1560,295
+hr-time,2,50,50,[],[],9,3
+html,2,0,20,[],[],1560,300
 media-capabilities,2,50,50,[],[],0,0
 media-source,2,90,95,[],[],13,12
 navigation-timing,2,50,50,[],[],39,21
 notifications,2,100,100,[],[],1,1
 page-visibility,2,100,100,[],[],6,6
-performance-timeline,2,50,50,[],[],35,10
+performance-timeline,2,50,50,[],[],35,8
 referrer-policy,2,50,50,[],[],619,67
 resource-timing,2,50,50,[],[],29,11
 service-workers,2,100,100,[],[],8,8
@@ -61,7 +61,7 @@ user-timing,2,50,50,[],[],39,16
 webaudio,2,15,35,[],[],151,49
 webgl,2,0,25,[],[],82,18
 webmessaging,2,35,35,[],[],85,25
-websockets,2,35,35,[],[],79,28
+websockets,2,35,35,[],[],79,30
 webstorage,2,35,55,[],[],14,5
-workers,2,35,35,[],[],145,43
-xhr,2,35,65,[],[],108,55
+workers,2,35,35,[],[],145,42
+xhr,2,35,65,[],[],108,50

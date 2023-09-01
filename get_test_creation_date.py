@@ -38,7 +38,7 @@ def get_all_tests(url: str):
 
 
 def get_path_ready(version: str):
-    '''get local path read for the versions'''
+    '''get local path ready for the versions'''
     if os.path.isdir(version):
         shutil.rmtree(version)
         os.mkdir(version)
@@ -115,10 +115,10 @@ def get_test_creation_date(
             test_file_path = test_file_path.replace(".any.html", ".any.js")
 
             try:
-                creation_date = g.log('--format=%aD', test_file_path).splitlines()[-1]
+                creation_date = g.log('--follow', '--format=%aD', test_file_path).splitlines()[-1]
             except:
                 try:
-                    creation_date = g.log('--format=%aD', test_file_path.replace('.html', '.js')).splitlines()[-1]
+                    creation_date = g.log('--follow', '--format=%aD', test_file_path.replace('.html', '.js')).splitlines()[-1]
                 except:
                     print('Unable to find creation date for', test)
                     creation_date = ''

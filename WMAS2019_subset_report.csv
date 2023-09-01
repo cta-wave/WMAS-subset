@@ -1,9 +1,9 @@
 API Name,Cut Off Age(year),Percentage Of Recent,Percentage Of Established,Block List,Must Include List,Number of Common Passed Tests,Selected Test Count
-2dcontext,2,5,10,[],[],723,0
-FileAPI,2,100,100,[],[],23,4
+2dcontext,2,5,10,[],[],723,78
+FileAPI,2,100,100,[],[],23,12
 IndexedDB,2,80,80,[],[],9,8
 WebCryptoAPI,2,85,90,[],[],10,2
-content-security-policy,2,20,25,[],[],160,28
+content-security-policy,2,20,25,[],[],160,29
 css/compositing,2,50,55,[],[],11,6
 css/css-animations,2,50,55,[],[],34,15
 css/css-backgrounds,2,50,55,[],[],111,55
@@ -19,15 +19,15 @@ css/css-namespaces,2,50,55,[],[],0,0
 css/css-style-attr,2,50,55,[],[],0,0
 css/css-syntax,2,50,55,[],[],26,12
 css/css-transforms,2,50,55,[],[],56,25
-css/css-transitions,2,50,55,[],[],44,16
-css/css-ui,2,50,55,[],[],54,26
+css/css-transitions,2,50,55,[],[],44,17
+css/css-ui,2,50,55,[],[],54,28
 css/css-values,2,50,55,[],[],44,17
 css/css-variables,2,50,55,[],[],24,8
 css/css-writing-modes,2,50,55,[],[],17,8
 css/CSS2,2,50,55,[],[],37,14
 css/cssom-view,2,50,55,[],[],68,34
 css/filter-effects,2,50,55,[],[],24,11
-css/mediaqueries,2,50,55,[],[],1,0
+css/mediaqueries,2,100,100,[],[],1,0
 css/selectors,2,50,55,[],[],96,28
 dom,2,35,35,[],[],159,56
 ecmascript/tests/annexB,2,35,35,[],[],667,232
@@ -38,7 +38,7 @@ ecmascript/tests/language,2,15,15,[],[],7670,1084
 encrypted-media,2,80,90,[],[],11,10
 fetch,2,35,35,[],[],52,21
 fullscreen,2,80,80,[],[],0,0
-html,2,0,20,[],[],1024,168
+html,2,0,20,[],[],1024,193
 manifest,2,80,80,[],[],0,0
 media-source,2,90,95,[],[],9,7
 notifications,2,100,100,[],[],1,1
@@ -46,11 +46,11 @@ page-visibility,2,100,100,[],[],3,3
 service-workers,2,100,100,[],[],5,4
 subresource-integrity,2,100,100,[],[],1,1
 uievents,2,100,100,[],[],5,5
-upgrade-insecure-requests,2,55,55,[],[],55,0
+upgrade-insecure-requests,2,100,100,[],[],55,0
 webaudio,2,15,35,[],[],154,23
 webgl,2,0,25,[],[],649,162
 webmessaging,2,35,35,[],[],48,24
 websockets,2,35,35,[],[],73,29
 webstorage,2,35,55,[],[],26,13
 workers,2,35,35,[],[],65,22
-xhr,2,35,65,[],[],24,11
+xhr,2,35,65,[],[],24,16

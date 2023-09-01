@@ -197,8 +197,8 @@
 	},
 	"css/mediaqueries":{
 		"cut_off_age":2,
-		"percentage_of_recent":50,
-		"percentage_of_established":55,
+		"percentage_of_recent":100,
+		"percentage_of_established":100,
 		"block_list":[],
 		"must_include_list":[]
 	},
